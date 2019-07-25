@@ -8,26 +8,28 @@ function App() {
     { id: 1, name: "Angela", email: "angela@gmail.com", role: "TL" },
   ]);
   const [idCount, setIdCount] = useState(2);
-  const [memberToEdit, switchEditMember] = useState()
-  const [isEditing, setEdit] = useState(false)
+  const [memberToEdit, switchEditMember] = useState();
+  const [isEditing, setEdit] = useState(false);
 
   const addToMembers = member => {
-    isEditing ? setMembers(member) : setMembers([...members, {...member, id: idCount}]);
+    isEditing
+      ? setMembers(member)
+      : setMembers([...members, { ...member, id: idCount }]);
   };
 
-  const editTrue = (id) => {
-    setEdit(true)
-    switchEditMember(id)
-  }
+  const editTrue = id => {
+    setEdit(true);
+    switchEditMember(id);
+  };
 
   const editFalse = () => {
-    setEdit(false)
-    switchEditMember(null)
-  }
+    setEdit(false);
+    switchEditMember(null);
+  };
   return (
     <div className="App">
       <Form
-      members={members}
+        members={members}
         addToMembers={addToMembers}
         idCount={idCount}
         setIdCount={setIdCount}

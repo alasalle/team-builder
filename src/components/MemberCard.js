@@ -1,6 +1,6 @@
 import React from "react";
 
-const MemberCard = ({member, editTrue}) => {
+const MemberCard = ({ member, editTrue }) => {
   return (
     <div>
       <h3>{member.name}</h3>

@@ -1,12 +1,14 @@
-import React from 'react'
-import MemberCard from './MemberCard'
+import React from "react";
+import MemberCard from "./MemberCard";
 
-const MemberList = ({members, editTrue}) => {
+const MemberList = ({ members, editTrue }) => {
   return (
     <div>
-      {members.map(member => <MemberCard member={member} editTrue={editTrue} />)}
+      {members.map(member => (
+        <MemberCard member={member} editTrue={editTrue} />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default MemberList
+export default MemberList;
