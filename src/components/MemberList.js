@@ -1,13 +1,14 @@
 import React from "react";
 import MemberCard from "./MemberCard";
+import { CardDeck } from "reactstrap";
 
 const MemberList = ({ members, editTrue }) => {
   return (
-    <div>
+    <CardDeck>
       {members.map(member => (
-        <MemberCard member={member} editTrue={editTrue} />
+        <MemberCard key={member.id} member={member} editTrue={editTrue} />
       ))}
-    </div>
+    </CardDeck>
   );
 };
 
